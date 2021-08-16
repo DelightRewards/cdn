@@ -1,9 +1,8 @@
-<script>
-  const sendPayloadToBackend = (data) => {
-  const targetScript = document.querySelector('script[data-store]');
-  if (targetScript){
-    const storeName = targetScript.getAttribute('data-store');
-    console.log('got store', storeName)
+const sendPayloadToBackend = (data) => {
+  const targetScript = document.querySelector("#delight-tracker");
+  if (targetScript) {
+    const storeName = targetScript.getAttribute("data-store");
+    console.log("got store", storeName);
     // const url =
     //   "https://us-central1-spherical-gate-286620.cloudfunctions.net/sendReferralDataSomewhere";
     // const response = fetch(url, {
@@ -19,22 +18,20 @@
     //   }),
     // });
   }
-
 };
 
-  window.addEventListener("load", () => {
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const utmSource = urlParams.get('utm_source');
-    const userId = localStorage.getItem('');
+window.addEventListener("load", () => {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const utmSource = urlParams.get("utm_source");
+  const userId = localStorage.getItem("");
 
-    if (utmSource && utmSource === "delightrewards" && targetScript){
-      const storeName = targetScript.getAttribute('data-store');
-      if (storeName){
-        sendPayloadToBackend({
-          user: userId || 'no-storage'
-        });
-      }
+  if (utmSource && utmSource === "delightrewards" && targetScript) {
+    const storeName = targetScript.getAttribute("data-store");
+    if (storeName) {
+      sendPayloadToBackend({
+        user: userId || "no-storage",
+      });
     }
-  });
-</script>
+  }
+});

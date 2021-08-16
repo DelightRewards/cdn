@@ -3,20 +3,21 @@
   const targetScript = document.querySelector('script[data-store]');
   if (targetScript){
     const storeName = targetScript.getAttribute('data-store');
-    const url =
-      "https://us-central1-spherical-gate-286620.cloudfunctions.net/sendReferralDataSomewhere";
-    const response = fetch(url, {
-      method: "POST",
-      mode: "no-cors",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        store: storeName,
-        data: data,
-        source: "delightrewards",
-      }),
-    });
+    console.log('got store', storeName)
+    // const url =
+    //   "https://us-central1-spherical-gate-286620.cloudfunctions.net/sendReferralDataSomewhere";
+    // const response = fetch(url, {
+    //   method: "POST",
+    //   mode: "no-cors",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({
+    //     store: storeName,
+    //     data: data,
+    //     source: "delightrewards",
+    //   }),
+    // });
   }
 
 };

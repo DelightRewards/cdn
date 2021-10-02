@@ -11,7 +11,7 @@ window.addEventListener("load", () => {
     delightStyles.type = "text/css";
     delightStyles.rel = "stylesheet";
     delightStyles.href =
-      "https://cdn.jsdelivr.net/gh/DelightRewards/cdn/bigcommerce/reviews/revies.min.css";
+      "https://cdn.jsdelivr.net/gh/DelightRewards/cdn/bigcommerce/reviews/reviews.min.css";
     head.appendChild(delightStyles);
 
     let reviews = `
